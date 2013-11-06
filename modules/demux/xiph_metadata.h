@@ -39,8 +39,8 @@ void vorbis_ParseComment( vlc_meta_t **pp_meta,
         int *i_seekpoint, seekpoint_t ***ppp_seekpoint );
 
 static const struct {
-  const char *psz_tag;
-  const char *psz_i18n;
+  /*const*/ char *psz_tag;			// sunqueen modify
+  /*const*/ char *psz_i18n;			// sunqueen modify
 } Katei18nCategories[] = {
     /* From Silvia's Mozilla list */
     { "CC",      N_("Closed captions") },

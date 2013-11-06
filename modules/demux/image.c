@@ -74,7 +74,7 @@ static void Close(vlc_object_t *);
     "Use real-time mode suitable for being used as a master input and " \
     "real-time input slaves.")
 
-vlc_module_begin()
+vlc_module_begin( image )			// sunqueen modify
     set_description(N_("Image demuxer"))
     set_shortname(N_("Image"))
     set_category(CAT_INPUT)
@@ -473,7 +473,7 @@ static bool IsTarga(stream_t *s)
 typedef struct {
     vlc_fourcc_t  codec;
     int           marker_size;
-    const uint8_t marker[14];
+    /*const*/ uint8_t marker[14];			// sunqueen modify
     bool          (*detect)(stream_t *s);
 } image_format_t;
 

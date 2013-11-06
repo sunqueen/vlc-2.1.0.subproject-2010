@@ -533,7 +533,7 @@ static picture_t *ImageFilter( image_handler_t *p_image, picture_t *p_pic,
 static const struct
 {
     vlc_fourcc_t i_codec;
-    const char psz_ext[7];
+    /*const*/ char psz_ext[7];			// sunqueen modify
 
 } ext_table[] =
 {
@@ -590,7 +590,7 @@ static const char *Fourcc2Ext( vlc_fourcc_t i_codec )
 static const struct
 {
     vlc_fourcc_t i_codec;
-    const char *psz_mime;
+    /*const*/ char *psz_mime;			// sunqueen modify
 } mime_table[] =
 {
     { VLC_CODEC_BMP,               "image/bmp" },

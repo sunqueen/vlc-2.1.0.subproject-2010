@@ -346,7 +346,7 @@ static const struct
 {
     uint16_t     i_tag;
     vlc_fourcc_t i_fourcc;
-    const char  *psz_name;
+    /*const*/ char  *psz_name;			// sunqueen modify
 }
 wave_format_tag_to_fourcc[] =
 {
@@ -438,7 +438,7 @@ static const struct
 {
     GUID         guid_tag;
     vlc_fourcc_t i_fourcc;
-    const char  *psz_name;
+    /*const*/ char  *psz_name;			// sunqueen modify
 }
 sub_format_tag_to_fourcc[] =
 {

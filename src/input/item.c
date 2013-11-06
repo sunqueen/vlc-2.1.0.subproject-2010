@@ -910,7 +910,7 @@ input_item_t *input_item_Copy( input_item_t *p_input )
 
 struct item_type_entry
 {
-    const char psz_scheme[7];
+    /*const*/ char psz_scheme[7];			// sunqueen modify
     uint8_t    i_type;
 };
 

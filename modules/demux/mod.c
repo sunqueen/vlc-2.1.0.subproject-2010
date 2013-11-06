@@ -71,7 +71,7 @@ static void Close  ( vlc_object_t * );
 #define SURROUND_DELAY_LONGTEXT N_("Surround delay, in ms. Usual values are " \
                 "from 5 to 40 ms." )
 
-vlc_module_begin ()
+vlc_module_begin ( mod )				// sunqueen modify
     set_shortname( "MOD")
     set_description( N_("MOD demuxer (libmodplug)" ) )
     set_capability( "demux", 10 )
@@ -444,7 +444,7 @@ static int Validate( demux_t *p_demux, const char *psz_ext )
     static const struct
     {
         int i_offset;
-        const char *psz_marker;
+        /*const*/ char *psz_marker;			// sunqueen modify
     } p_marker[] = {
         {  0, "ziRCONia" },             /* MMCMP files */
         {  0, "Extended Module" },      /* XM */

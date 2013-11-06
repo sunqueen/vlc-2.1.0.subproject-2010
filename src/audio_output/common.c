@@ -522,7 +522,7 @@ bool aout_CheckChannelExtraction( int *pi_selection,
 static int FilterOrder( const char *psz_name )
 {
     static const struct {
-        const char psz_name[10];
+        /*const*/ char psz_name[10];			// sunqueen modify
         int        i_order;
     } filter[] = {
         { "equalizer",  0 },

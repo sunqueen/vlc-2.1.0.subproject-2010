@@ -634,7 +634,7 @@ static vlc_object_t *get_object( libvlc_media_player_t * p_mi,
 
 
 typedef const struct {
-    const char name[20];
+    /*const*/ char name[20];			// sunqueen modify
     unsigned type;
 } opt_t;
 
